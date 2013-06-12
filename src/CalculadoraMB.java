@@ -1,6 +1,3 @@
-import javax.faces.bean.ManagedBean;
-
-@ManagedBean
 public class CalculadoraMB {
 	private double x;
 	private double y;
