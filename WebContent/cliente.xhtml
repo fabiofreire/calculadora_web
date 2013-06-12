@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<title>Calculadora WEB</title>
+
+<h2>Calculadora WEB</h2>
+
+<h:form>
+
+	<h:inputText class="input-xlarge" value="#{calculadoraMB.x}"
+		required="true"></h:inputText>
+	<h:inputText class="input-xlarge" value="#{calculadoraMB.y}"
+		required="true"></h:inputText>
+
+	<h:outputLabel class="control-label" value="Resultado:"></h:outputLabel>
+	<h:outputText value="#{calculadoraMB.r}"></h:outputText>
+
+	<br />
+
+	<div style="display: inline;">
+		<h:commandButton class="btn btn-primary" value="+"
+			action="#{calculadoraMB.som}"></h:commandButton>
+
+
+		<h:commandButton class="btn btn-primary" value="-"
+			action="#{calculadoraMB.sub}"></h:commandButton>
+
+
+		<h:commandButton class="btn btn-primary" value="/"
+			action="#{calculadoraMB.dividir}"></h:commandButton>
+
+
+		<h:commandButton class="btn btn-primary" value="x"
+			action="#{calculadoraMB.mul}"></h:commandButton>
+	</div>
+
+</h:form>
+</html>
+
