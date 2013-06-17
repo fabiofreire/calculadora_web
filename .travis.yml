@@ -1,0 +1,23 @@
+language: java
+
+before_install: git clone -b travis `git config --get remote.origin.url` target/travis
+
+script: mvn deploy --settings target/travis/settings.xml
+
+after_success:
+  - git tag "$((TRAVIS_JOB_ID - 1))" && https://fabiofreire:$t39Ihj7t&@github.com/fabiofreire/calculadora_web.git --tags
+
+branches:
+  only:
+  - master
+
+env:
+  global:
+  - secure: |-
+      cfthjLycq0iMcL0HUFBMNYbZ1cr39q4hXmIFG8GajdfT/IgQWbrOLoNDfBLs
+      +WjJXWPjdxj8stBDhCKQfnhccz2GyOH6ojmnfn8MzjTCCyjnW57bXLuBVGrL
+      2luyXcp+aoL8BXpMGNgY63XDKKsP4Uk2OVeNw4PPKOHjdp+4UFA=
+  - secure: |-
+      GhlLdp4Qcuz/tZcjbjfQvv5g2M6RCcnhjE62RNAoQyQKwwoQRhrH3utFoyBJ
+      0fsePJGn9RkHmqj8GfiXemtGQlf8CXaQPX7qSBRSPwcVjvr2ZzoUZRZpo/Cv
+      3aWXgIHvPRKKS+Roa0HuY/ckSWlYTzghJnUkNfIcWdg19w8Jo54=
